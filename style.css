@@ -1,0 +1,220 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eec0c6;
+    background-image: linear-gradient(315deg, #eec0c6 30%, #7ee8fa 70%);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.mobile-container {
+    background-color: #fff;
+    width: 400px;
+    box-shadow: 0 0 10px 2px #3333331A;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: center;
+}
+
+header > input{
+    background-color: #eee;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 1rem;
+    font-family: inherit;
+}
+
+header > button {
+    border: none;
+    background-color: transparent;
+    color: #aaa;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.favourite-container {
+    background-color: rgb(233, 199, 255);
+    text-align: center;
+    padding: 0.25rem 1rem;
+}
+
+.favourite-meals {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.favourite-meals > li {
+    cursor: pointer;
+    position: relative;
+    width: 5px;
+    width: 75px;
+}
+
+.favourite-meals > li > .clear {
+    background-color: transparent;
+    position: absolute;
+    top: -0.5rem;
+    opacity: 0;
+    right: -0.5rem;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.favourite-meals > li:hover > .clear {
+    opacity: 1;
+}
+
+.favourite-meals > li > .favMeal-header > img{
+    overflow: auto;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px 2px #3333331A;
+    border-radius: 50%;
+    object-fit: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.favourite-meals > li > span {
+    font-size: 0.9rem;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+}
+
+.meal {
+    border-radius: 3px;
+    box-shadow: 0 0 10px 2px #3333331A;
+    margin: 1.5rem;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.meal-header {
+    position: relative;
+}
+
+.meal-header > .random{
+    position: absolute;
+    top: 1rem;
+    background-color: #fff;
+    padding: 0.25rem 1rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.meal-header > img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pad: 1rem;
+}
+
+.meal-body > h4 {
+    margin: 0.5rem;
+}
+
+.meal-body > .favourite-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: gray;
+    cursor: pointer;
+}
+
+.meal-body > .favourite-btn.active {
+    color: rebeccapurple;
+}
+
+.popup-container {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popup {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: #fff;
+    max-width: 600px;
+    width: 100%;
+    padding: 0 2rem;
+    border-radius: 5px;
+    position: relative;
+    max-height: 100vh;
+    overflow: auto;
+}
+
+.popup > .close-popup {
+    border: none;
+    background-color: transparent;
+    color: #aaa;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    right: 1rem;
+    top: 1rem;
+    position: absolute;
+    cursor: pointer;
+}
+
+.refreshDiv > .refreshBtn {
+    background-color: rgb(233, 199, 255);
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+.refreshDiv > .refreshBtn:hover {
+    background-color: #5a1a75;
+}
+
+.refreshDiv > .refreshBtn:focus {
+    background-color: #320d42;
+    outline: none;
+}
