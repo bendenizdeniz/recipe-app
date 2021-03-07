@@ -1,14 +1,11 @@
 const mealsEl = document.getElementById('meals');
 const favouriteContainer = document.getElementById('favourite-meals');
-
 const searchBtn = document.getElementById("search");
 const searchTerm = document.getElementById("search-term");
-
 const mealPopup = document.getElementById('meal-popup');
 const mealInfoEl = document.getElementById('meal-info');
 const popupCloseBtn = document.getElementById('close-popup');
-
-const refreshBtn = document.getElementById('refreshBtn');
+const refreshBtn = document.getElementById('refresh-btn');
 
 getRandomMeal();
 fetchFavouriteMeals();
